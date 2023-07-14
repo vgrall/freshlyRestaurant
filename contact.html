@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/e06d583932.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo-title">
+            <img class="logo" src="ressources/images/logo.png" alt="logo">
+            <h1><i class="fas fa-star fa-xs" style="color: #950000;"></i>FRESHLY RESTAURANT<i class="fas fa-star fa-xs"
+                    style="color: #950000;"></i></h1>
+        </div>
+
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+
+    </header>
+
+    <!-- FORM CONTACT -->
+
+    <section>
+        <h2><i class="fas fa-star fa-xs" style="color: #950000;"></i>Contact Us<i class="fas fa-star fa-xs"
+                style="color: #950000;"></i></h2>
+        <div class="containerP">
+            <p>If your want to make a reservation, please complete this form.</p>
+            <p>Fields with <i id="starRequired" class="fas fa-star" style="color: #950000;"></i> are required</i></p>
+        </div>
+
+        <div class="form-container">
+
+            <form class="form">
+
+                <div class="formGrid">
+                    <div class="form-row">
+                        <label for="field1"><i id="starRequired" class="fas fa-star" style="color: #950000;"></i>Date
+                            :</label>
+                        <input type="date" id="field1" name="field1" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="field2"><i id="starRequired" class="fas fa-star"
+                                style="color: #950000;"></i>Name</label>
+                        <input type="text" id="field2" name="field2" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="field3"><i id="starRequired" class="fas fa-star"
+                                style="color: #950000;"></i>Time</label>
+                        <input type="time" id="field3" name="field3" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="field4"><i id="starRequired" class="fas fa-star"
+                                style="color: #950000;"></i>Email</label>
+                        <input type="email" id="field4" name="field4" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="field5"><i id="starRequired" class="fas fa-star" style="color: #950000;"></i>Number
+                            of
+                            Guests</label>
+                        <input type="number" id="field5" name="field5" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="field6"><i id="starRequired" class="fas fa-star"
+                                style="color: #950000;"></i>Telephone</label>
+                        <input type="tel" id="field6" name="field6" required>
+                    </div>
+                </div>
+
+                <h2>Further request</h2>
+                <div class="furtherRequest">
+                    <div class="form-row">
+                        <label for="field7"></label>
+                        <input type="text" id="field6" name="field6" required>
+                    </div>
+                </div>
+                <div class="btnContainer">
+                    <button><a href="">Reserve</a></button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- MAP CONTACT -->
+
+    <h2><i class="fas fa-star fa-xs" style="color: #950000;"></i>Our Location<i class="fas fa-star fa-xs"
+            style="color: #950000;"></i></h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.271441172524!2d-74.00304702385846!3d40.73405233626502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25996a02e5209%3A0xae7c604488b12607!2s13%20Christopher%20St%2C%20New%20York%2C%20NY%2010014%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1689251288658!5m2!1sfr!2sfr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer-instructions">
+
+            <div class="containerTabletteOpening">
+                <h3 class="title-footer">Opening Hours</h3>
+                <ul>
+                    <li class="footerContainerItems">Monday: Closed</li>
+                    <li class="footerContainerItems">Tue-Wed: 9am - 10pm</li>
+                    <li class="footerContainerItems">Thu-Fri: 9am - 10pm</li>
+                    <li class="footerContainerItems">Sat-Sun: 5am - 10pm</li>
+                </ul>
+
+            </div>
+
+            <div class="containerTabletteContact">
+                <div>
+                    <h3 class="title-footer">Contact</h3>
+                    <ul>
+                        <li class="footerContainerItems">13 Christopher Street</li>
+                        <li class="footerContainerItems">New York,</li>
+                        <li class="footerContainerItems">NY 10014-3543</li>
+                        <li class="footerContainerItems">+01 2000 800 9999</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="containerTabletteSocialNetworks">
+
+
+                <div>
+
+                    <h3 class="title-footer">Social Networks</h3>
+
+                    <div class="iconSocialNetwork">
+
+                        <span class="fonticon"> <a href=""><i class="fab fa-facebook-f"
+                                    style="color: #ffffff;"></i></a></span>
+
+                        <span class="fonticon"><a href=""><i class="fab fa-instagram"
+                                    style="color: #ffffff;"></i></a></span>
+
+                        <span class="fonticon"><a href=""><i class="fab fa-pinterest-p"
+                                    style="color: #ffffff;"></i></a></span>
+
+
+
+
+                    </div>
+                </div>
+
+        </section>
+
+        <div class="mentionsLegales">
+            <img class="Academyimg"
+                src="https://3wa.fr/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/01/cropped-big.png.webp">
+            <p>Cet exercice de 3W Academy est mis à disposition <u>pour l'usage personnel
+                    des étudiants. Pas de
+                    rediffusion</u>
+                -</p>
+            <p><u>Attribution - Pas d'utilisation Commerciale - Pas de Modification -
+                    International</u></p>
+            <p>Les autorisations au-delà du champ de cette licence peuvent être obtenues
+                auprès de contact@3wa.fr</p>
+            <p>Les maquettes ont été réalisées par <u>Catherine Denos</u></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

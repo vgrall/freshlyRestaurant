@@ -1,0 +1,763 @@
+/* # Exercice final: Freshly Restaurant
+
+Vous devez intégrer en responsive mobile first, les pages suivantes, par ordre de priorité :
+- a minima : la page d'accueil et la page des menus
+- en option : la page de contact et la page about
+
+Le contenu sur desktop a une largeur maximum de 1400px.
+Points de rupture :
+- tablette : 780px
+- desktop : 1100px
+
+### Polices
+
+Google Fonts
+- Athiti : par défaut (graisse : 500)
+- Merienda : pour les titres
+
+### Taille des polices
+
+Par défaut : 18px
+Titre des pages : 30px
+Sous-rubriques : 25px
+Titre des menus : 20px
+Prix des menus : 50px
+Texte sous menus : 15px
+Titres du pied de page : 18px
+Texte du pied de page, boutons de tri et bouton de validation du formulaire : 16px
+
+Interlignage général de 1.5
+
+Les pictos sont des Font Awesome.
+
+### Couleurs
+
+Marron : #4c4343
+Beige : #ebe3db
+Rouge : #950000
+
+- Les ombres sur les images ont les valeurs : 3px 3px 8px rgba(76,67,67,.5)
+
+- Les ombres sur les boutons "see more" ont les valeurs : box-shadow: 2px 2px 2px silver;
+
+****************
+ PAGE D'ACCUEIL
+****************
+
+Le plugin utilisé pour le slider de la page d'accueil est : slick slider (http://kenwheeler.github.io/slick/) que vous devrez personnaliser pour obtenir le rendu tel que sur la maquette.
+
+Navigation
+-----------
+La rubrique de la page courante est différenciée par le fond marron.
+Au survol des rubriques, celles-ci passent progressivement à la couleur blanche pour le texte et rouge pour le fond.
+
+Images des menus
+----------------
+Au survol des images des menus, celles-ci s'opacifient progressivement (couleur rgba(76,67,67,.9) ) et affichent le prix du menu (cf. capture d'écran)
+
+Au survol des éléments "See more" le fond passe progressivement à la couleur rouge.
+
+************
+ PAGE MENUS
+************
+
+Le plugin de fonction de tri utilisé pour la page Menus est : mixitup (https://www.kunkalabs.com/mixitup/)
+
+Au survol des images des plats, faire un léger effet de zoom et afficher le nom du plat (cf. capture d'écran).
+
+ATTENTION : Pour le plugin Mixitup, afin que le plugin fonctionne sans bug avec l'effet de zoom ajouté sur la structure figure / figcaption, il est nécessaire d'utiliser une div qui entoure chaque figure.
+
+**************
+ PAGE CONTACT
+**************
+
+La carte est affichée avec open street map. */
+
+
+
+
+
+/* *****************************************************************
+GENERAL
+***************************************************************** */
+body * {
+	box-sizing: border-box;
+	font-family: 'Athiti', sans-serif;
+}
+
+body {
+	font-size: 1.8rem;
+	margin:0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+
+body {
+	
+}
+
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+header{
+	
+}
+
+nav,
+h1,
+h2,
+h3,
+ {
+	margin: 0;
+	padding: 0;
+
+}
+
+h2, h3 {
+	font-family: 'Merienda', cursive;
+}
+
+ul {
+	padding: 0;
+}
+
+p {
+	margin: 0 0 1rem 0;
+}
+
+/* *****************************************************************
+HEADER
+***************************************************************** */
+
+header {
+	text-align: center;
+	padding: 2rem 0 0 0;
+	background: linear-gradient(180deg,  rgb(235,227,219) 1.25rem, white, white, white, white);
+}
+
+.menu{
+	background-color: #ebe3db;
+	
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	border-top: 0.3px solid #4c4343;
+	border-bottom: 0.3px solid #4c4343;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+}
+
+a {
+	color: #4c4343;
+	font-weight: 600;
+	text-decoration: none;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.fa-xs {
+	padding: 2rem 1rem;
+    font-size: .9rem;
+}
+
+.current{
+	color: white;
+	background-color: #4c4343;
+	height: 3rem;
+}
+
+a:hover {
+	color: white;
+	background-color: #950000;
+	height: 3rem;
+}
+
+.logo{
+	width:100%;
+	height: auto;
+	padding: 0 14rem;
+}
+
+h1 {
+display: flex;
+justify-content: center;
+font-size: 2.5rem;
+line-height: 1.5;
+
+}
+
+/* *****************************************************************
+FOOTER
+***************************************************************** */
+.footer-instructions{
+	background-image: url(ressources/images/footer-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-size: 1.6rem;
+	
+	
+}
+
+
+.title-footer{
+
+	border-bottom: 2px dotted white;
+	padding-top:2rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	margin-top: 3.5rem;
+	
+}
+
+.footerContainerItems{
+	display: flex;
+	flex-direction: column;
+	border: none;
+	text-align: center;
+	font-size: 1.4rem;
+
+}
+
+.iconSocialNetwork{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.fonticon{
+
+	font-size: 2.8rem;
+	padding:0 1rem;
+	
+}
+
+
+
+.fonticon:hover{
+
+	background-color: #950000;
+	
+}
+	
+
+.mentionsLegales{
+	text-align: center;
+	color:white;
+	font-size: 1rem;
+	background-color: #4c4343;
+	padding: 2rem;
+}
+
+.Academyimg{
+	width: 15%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+/* *****************************************************************
+SLIDER
+***************************************************************** */
+
+
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: auto;
+    display: flex;
+    
+
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+    
+}
+
+.slide img{
+	width: 100%;
+	height: auto;
+	padding: 0 1rem;
+	
+}
+
+/* css for manuel navigation */
+
+.navigationManual{
+height: 10rem;
+margin-top: -8rem;
+}
+
+.navigation-manuel{
+position: absolute;
+width: auto;
+margin: 8rem 0 0 10rem;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+.manual-btn{
+   
+    border: 3px solid #4c4343;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin: 0 7px;
+	background-color: #4c4343;
+
+}
+
+.manual-btn:hover{
+	
+	color: #950000;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 4rem;
+}
+
+.manual-btn:hover{
+    background: #950000;
+    color: #4c4343;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}  
+
+
+
+/* *****************************************************************
+MAIN WELCOME
+***************************************************************** */
+.welcome, .main-menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+.float-left p{
+	text-align: justify;
+}
+
+img.float-right{
+	padding-left: 0.3rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	height: auto;
+}
+
+h2 {
+	font-size: 1.8rem;
+	text-align: center;}
+
+
+
+
+/* *****************************************************************
+MAIN SPECIAL MENUS
+***************************************************************** */
+
+/* IMAGES PLATS + LISTE INGREDIENTS */
+.main-menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+.menuItems{
+	width: 100%;
+	flex-wrap: wrap;
+	background-color: #ebe3db;
+padding: 2rem 0;
+text-align: center;
+margin-bottom: 1rem;
+}
+
+
+h3{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.menu-li{
+	border-bottom: 2px dotted #4c4343;
+	margin:1rem 0;
+	border-top: none;
+	text-align: start;
+}
+
+
+.menu-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #4c4343;
+	color: white;
+	border: none;
+	padding: 1rem;
+	font-size: 1.3rem;
+	margin:0 3rem;
+	width: 30rem;
+
+}
+
+.seeMoreText{
+	
+	margin-left: 1rem;
+}
+
+.menu-button a{
+	color: white;
+	height: auto;
+}
+
+.menu-button:hover{
+
+	background-color: #950000;
+}
+
+
+/* TEXT CONTENT HOVER ADVERTISSEMENT*/
+
+.wrapper{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageContainer{
+	width: 50rem;
+	position: relative;
+}
+
+.imageContainer img{
+	width: 100%;
+	display: block;
+	margin:auto;
+	height: auto;
+}
+
+.contentHover{
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	position: absolute;
+	background: rgba(99, 97, 97, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+
+}
+
+.contentHover:hover{
+	opacity: 1;
+	
+}
+
+.borderHover{
+	border: 2px solid white;
+	width: 80%;
+	height: 80%;
+	
+}
+
+.contentHover h4{
+	font-size: 3rem;
+	margin-bottom: -0.3rem;
+	color:white;
+	
+}
+
+.contentHover p{
+	font-size: 2rem;
+	color:white;
+}
+
+/* *****************************************************************
+RESPONSIVE TABLETTE
+***************************************************************** */
+
+@media screen and (min-width: 780px){
+
+	/* *****************************************************************
+HEADER TABLETTE
+***************************************************************** */
+
+	.logo{
+	
+		padding: 0 30rem;
+	}
+
+	.current{
+		color: white;
+		background-color: #4c4343;
+		height: 5rem;
+	}
+	
+	
+	ul{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	li {
+		border: none;
+		flex:1;
+		height: 5rem;
+		
+	}
+
+	a:hover {
+		height: 5rem;
+	}
+
+		/* *****************************************************************
+FOOTER TABLETTE
+***************************************************************** */
+.footer-instructions {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
+	gap: 2rem; /* Espacement entre les colonnes */
+	padding:0 3rem;
+	height: 25rem;
+  }
+  
+
+  .containerTabletteOpening ul,
+  .containerTabletteContact ul {
+	display: flex;
+	flex-direction: column; 
+	align-items: center; 
+  }
+  
+
+  .Academyimg{
+	width: 8%;
+
+  }
+ 
+  
+
+
+/* *****************************************************************
+SLIDER TABLETTE
+***************************************************************** */
+
+.navigation-manuel{
+	
+	margin: 8rem 0 0 32rem;
+	
+	
+	
+	
+	}
+
+/* *****************************************************************
+SPECIAL MENUS TABLETTE
+***************************************************************** */
+	.menuGrid{
+		width: 75rem;
+	}
+    
+	.menu-button{
+		
+		padding: 1rem;
+		font-size: 2rem;
+		margin:0 2rem;
+		width: 70rem;
+	
+	}
+
+	.menuItems{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.menuItems ul{
+		display: flex;
+		flex-direction: column;
+		padding-left: 2rem;
+		
+	}
+
+	.contentHover h4{
+		padding-top: 4rem;
+	}
+
+	
+  
+}
+
+/* *****************************************************************
+RESPONSIVE DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1100px){
+
+	body{
+		max-width: 1400px;
+		margin: auto;
+	}
+
+
+	/* *****************************************************************
+HEADER DESKTOP
+***************************************************************** */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 3rem 3rem 3rem;
+	
+  }
+ 
+  .logo{
+	width: 10%;
+	padding: 0;
+	display: flex;
+
+}
+
+.logo-title{
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	text-align: right;
+	background-color: transparent;
+  }
+
+.menu ul{
+	display: flex;
+}
+
+.menu li {
+	margin-left: 1rem;
+	background-color: #ebe3db;
+	
+}
+
+.menu a{
+	padding:0.5rem 4rem;
+	
+}
+
+
+	/* *****************************************************************
+SLIDER DESKTOP
+***************************************************************** */
+
+
+.navigation-manuel{
+
+	margin: 8rem 0 0 65rem;
+
+	}
+
+
+
+	/* *****************************************************************
+ARTICLE DESKTOP
+***************************************************************** */
+.article{
+	flex-direction: row;
+	align-items: flex-start;
+	
+}
+
+.imgArticle {
+	float:right;
+	width: 50%;
+
+  }
+
+  .float-left p{
+font-size: 2.8rem;
+text-align: justify;
+padding-right: 2.5rem;
+
+  }
+  
+ 
+/* *****************************************************************
+MAIN MENU SPECIAL DESKTOP
+***************************************************************** */
+
+.main-menu{
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+.menuItems h3{
+
+}
+
+.menuItems{
+	width: 33%;
+	flex-wrap: nowrap;
+padding: 2rem;;
+
+}
+
+.menu-button{
+	width: 30rem;
+}
+
+ 
+}

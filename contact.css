@@ -1,0 +1,248 @@
+p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.containerP{
+    padding: 0 3rem 1rem 3rem;
+}
+
+#starRequired{
+    font-size: .7rem;
+}
+
+  label {
+   
+    font-size: 1.2rem;
+  }
+
+
+  input {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .form-container{
+    background-color: #ebe3db;
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+input{
+  width: 12rem;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.form-row{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+}
+
+  .formGrid{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    
+    gap:2rem;
+  }
+  
+.furtherRequest input{
+  width: 30rem;
+  height: 10rem;
+
+}
+
+.furtherRequest{
+  padding-bottom:1rem;
+}
+
+button{
+  background-color: #4c4343;
+  color:white;
+ 
+ 
+}
+
+button a{
+  color:white;
+  text-decoration: none;
+  
+}
+
+button:hover{
+  background-color: #950000;
+  color:white;
+  cursor: pointer;
+ 
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.maps-container{
+  border:1px solid black;
+
+}
+
+iframe{
+  width: 100%;
+  height: auto;
+  padding:0 1rem;
+
+}
+
+/* *****************************************************************
+RESPONSIVE TABLETTE
+***************************************************************** */
+
+@media screen and (min-width: 780px){
+
+	/* *****************************************************************
+HEADER TABLETTE
+***************************************************************** */
+
+	.logo{
+	
+		padding: 0 30rem;
+	}
+
+	.current{
+		color: white;
+		background-color: #4c4343;
+		height: 5rem;
+	}
+	
+	
+	ul{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	li {
+		border: none;
+		flex:1;
+		height: 5rem;
+		
+	}
+
+	a:hover {
+		height: 5rem;
+	}
+
+		/* *****************************************************************
+FOOTER TABLETTE
+***************************************************************** */
+.footer-instructions {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes égales */
+	gap: 2rem; /* Espacement entre les colonnes */
+	padding:0 3rem;
+	height: 25rem;
+  }
+  
+
+  .containerTabletteOpening ul,
+  .containerTabletteContact ul {
+	display: flex;
+	flex-direction: column; 
+	align-items: center; 
+  }
+  
+
+  .Academyimg{
+	width: 8%;
+
+  }
+ 
+/* *****************************************************************
+RESPONSIVE FORM TABLETTE
+***************************************************************** */
+
+  input{
+    width: 30rem;
+  }
+  
+  .formGrid{
+    gap:2rem 10rem;
+  }
+
+  
+    
+  .furtherRequest input{
+    width: 70rem;
+    height: 10rem;
+  
+  }
+  
+  .furtherRequest{
+    padding-bottom:1rem;
+  }
+  
+  button{
+    background-color: #4c4343;
+    color:white;
+    width: 30rem;
+   
+  }
+  
+  .btnContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  /* *****************************************************************
+RESPONSIVE MAP TABLETTE
+***************************************************************** */
+  iframe{
+  
+    height: 40rem;
+   
+  
+  }
+  
+  
+}
+
+/* *****************************************************************
+RESPONSIVE DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1100px){
+
+	body{
+		max-width: 1400px;
+		margin: auto;
+	}
+
+  /* *****************************************************************
+RESPONSIVE FORM DESKTOP
+***************************************************************** */
+
+.form-container{
+  margin:0 15rem;
+}
+
+/* *****************************************************************
+RESPONSIVE MAP DESKTOP
+***************************************************************** */
+
+iframe{
+padding: 0 8rem;
+  height: 30rem;
+
+
+}
+
+}
