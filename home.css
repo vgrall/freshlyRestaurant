@@ -312,18 +312,13 @@ SLIDER
 
 /* css for manuel navigation */
 
-.navigationManual{
-height: 10rem;
-margin-top: -8rem;
-}
-
 .navigation-manuel{
-position: absolute;
+position: relative;
 width: auto;
-margin: 8rem 0 0 10rem;
 display: flex;
+flex-direction: row;
 justify-content: center;
-align-items: center;
+
 
 
 
@@ -597,14 +592,7 @@ FOOTER TABLETTE
 SLIDER TABLETTE
 ***************************************************************** */
 
-.navigation-manuel{
-	
-	margin: 8rem 0 0 32rem;
-	
-	
-	
-	
-	}
+
 
 /* *****************************************************************
 SPECIAL MENUS TABLETTE
@@ -638,8 +626,7 @@ SPECIAL MENUS TABLETTE
 		padding-top: 4rem;
 	}
 
-	
-  
+
 }
 
 /* *****************************************************************
@@ -704,11 +691,6 @@ SLIDER DESKTOP
 ***************************************************************** */
 
 
-.navigation-manuel{
-
-	margin: 8rem 0 0 65rem;
-
-	}
 
 
 
@@ -724,6 +706,7 @@ ARTICLE DESKTOP
 .imgArticle {
 	float:right;
 	width: 50%;
+	padding: 2rem;
 
   }
 
