@@ -1,4 +1,8 @@
 
+/*****************************************************************
+SECTION ABOUT U +VIDEO
+***************************************************************** */
+
 
 .aboutUs p, .privateDining p{
     font-size: 1.2rem;
@@ -13,7 +17,7 @@
 }
 
 .videoCooking{
-  
+
    display: flex;
     justify-content: center;
    align-items: center;
@@ -24,7 +28,9 @@ video{
     height: auto;
 }
 
-
+/**************************************************************
+SECTION PRIVATE DINING
+***************************************************************** */
 
 figcaption{
     text-align: center;
@@ -37,18 +43,36 @@ figcaption{
     padding: .5rem 0;
 }
 
-* *****************************************************************
+img{
+    width: 100%;
+    height: auto;
+    padding: 0 2rem 1rem 2rem;
+}
+
+figcaption{
+    padding: 0 0 3rem 0;
+
+}
+
+/* *****************************************************************
 RESPONSIVE TABLETTE
 ***************************************************************** */
 
 @media screen and (min-width: 780px){
 
+
+    video{
+        width: 90%;
+        height: auto;
+    }
+
     .container {  
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 1.3rem;
-        grid-row-gap: 1.3rem;
+    
+    
+    
       }
 
 .img1 { grid-area: 1 / 2 / 2 / 3; }
@@ -58,3 +82,44 @@ RESPONSIVE TABLETTE
 
 
     }
+
+
+.backgroundContainer{
+    background-color: #ebe3db;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+/* *****************************************************************
+RESPONSIVE DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1100px){
+
+	body{
+		max-width: 1400px;
+		margin: auto;
+	}
+
+    video{
+        width: 70%;
+        height: auto;
+    }
+
+    .backgroundContainer{
+        background-color: #ebe3db;
+        margin: 2rem 12rem;
+        padding: 1rem;}
+
+    .privateDining p, .aboutUs p{
+        margin-left: 10rem;
+        margin-right: 10rem;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        
+    }
+
+    .aboutUs p{
+        padding-bottom: 2rem;
+    }
+}
